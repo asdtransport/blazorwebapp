@@ -27,7 +27,7 @@ jobs:
 
       - name: Run Docker container
         run: |
-          docker run -d -p 5074:80 --name myblazorapp blazorwebapp:latest
+          docker run -d -p 80:5074 --name myblazorapp blazorwebapp:latest
           sleep 120
           docker logs myblazorapp
 
