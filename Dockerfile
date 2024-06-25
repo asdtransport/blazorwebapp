@@ -25,7 +25,7 @@ WORKDIR /app
 COPY --from=publish /app/publish .
 
 # Expose port 80 for the application
-EXPOSE 80
+EXPOSE 5074
 
 # Set the entry point to launch the application when the container starts
 ENTRYPOINT ["dotnet", "blazorwebapp.dll"]
