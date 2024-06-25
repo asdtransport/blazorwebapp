@@ -7,7 +7,7 @@ EXPOSE 443
 # Use the .NET SDK image for building the application
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["blazorwebapp/blazorwebapp.csproj", "BlazorApp/"]
+COPY ["blazorwebapp/blazorwebapp.csproj", "blazorwebapp/"]
 RUN dotnet restore "blazorwebapp/blazorwebapp.csproj"
 COPY . .
 WORKDIR "/src/blazorwebapp/"
