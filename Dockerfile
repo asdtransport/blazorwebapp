@@ -1,12 +1,11 @@
 # Stage 1: Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
-WORKDIR /src
+WORKDIR ${GITHUB_WORKSPACE}/blazorwebapp
 
 # Copy the entire content from the GitHub runner context into the Docker build context
 COPY . .
 
 # Navigate to the folder containing the Blazor web app project file
-WORKDIR /src/blazorwebapp
 
 # Restore NuGet packages and build the application
 RUN dotnet restore
